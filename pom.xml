@@ -57,14 +57,6 @@
 
   <build>
     <plugins>
-        <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-            <mainClass>package br.mackenzie.webapp.WebApp</mainClass>
-            <layout>JAR</layout>
-        </configuration>
-    </plugin>
 
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
@@ -74,6 +66,8 @@
     <source>11</source>
     <target>11</target>
     <fork>true</fork>
+    <mainClass>package br.mackenzie.webapp.WebApp</mainClass>
+            <layout>JAR</layout>
     <compilerArgs>
         <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
         <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
