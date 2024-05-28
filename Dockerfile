@@ -7,6 +7,8 @@ COPY . .
 RUN apt-get install maven -y
 RUN mvn clean install 
 
+FROM openjdk:11-jdk-slim
+
 EXPOSE 8080
 
 COPY --from=build /target/sprint-boot-app-1.0.0.jar app.jar
